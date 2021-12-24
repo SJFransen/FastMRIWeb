@@ -1,0 +1,23 @@
+{
+  "name": "fastmriweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snorthman/FastMRIWeb/FastMRIWeb"
+  },
+  "author": "C.R. Noordman",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-debug": "^2.0.0-beta.29",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.29"
+  },
+  "dependencies": {
+    "vuepress": "^2.0.0-beta.30"
+  }
+}

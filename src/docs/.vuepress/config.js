@@ -8,10 +8,15 @@ module.exports = {
   title: 'FastMRI.eu',
   description: description,
   head: [
-    ['meta', { name: 'theme-color', content: '#EC7700' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'theme-color', content: '#EC7700' }]
   ],
+  bundlerConfig: {
+    vuePluginOptions: {
+      compilerOptions: {
+        customElement: true
+      }
+    }
+  },
   themeConfig: {
     logo: '/logo.png',
     repo: 'snorthman/FastMRIWeb',
@@ -20,8 +25,6 @@ module.exports = {
     editLinkText: 'Edit this page',
     docsDir: 'docs',
     lastUpdated: 'Last updated',
-    nextLinks: false,
-    prevLinks: false,
     darkMode: false,
     // sidebar: [
     //   {
@@ -51,6 +54,12 @@ module.exports = {
     ]
   },
   plugins: [
+    [
+      '@vuepress/register-components',
+      {
+        componentsDir: './components'
+      },
+    ],
     // 'seo', 'authors', 'mathjax'
   ]
 }
